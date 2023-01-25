@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            var a = 0, b = 0, c = 0;
+
+            function changeBackground(){
+                var x = document.getElementById('bg');
+                x.style.background = 'rgb('+a+', '+b+', '+c+')';
+                a += 100;
+                b += a + 50;
+                c += b + 70;
+
+                if (a > 255) a = a - b;
+                if (b > 255) b = a;
+                if (c > 255) c = b;
+            }
+        </script>
+    </head>
+
+    <body>
+        <h4>The input box will change color when up arrow key is pressed.</h4>
+        <input id="bg" onkeyup="changeBackground()"
+        placeholder="Write some numbers." style="color: #fff;">
+    </body>
+</html>

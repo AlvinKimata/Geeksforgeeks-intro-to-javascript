@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <!--Event corresponds to hovering the mouse pointer over the element 
+    and its children, to which it isbound to.-->
+
+    <head>
+        <script>
+            function hov(){
+                var e = document.getElementById('hover');
+                e.style.display = 'none';
+            }
+        </script>
+    </head>
+
+    <body>
+        <div id="hover" onmouseover="hov()"
+        style="background-color: green;
+                height: 200px;
+                width: 200px;">
+                </div>
+    </body>
+</html>
