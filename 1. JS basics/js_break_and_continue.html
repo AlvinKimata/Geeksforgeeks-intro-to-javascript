@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>js break statements</title>
+    </head>
+
+    <body style="text-align: center;">
+        <div>
+            <h1>Geeksforgeeks</h1>
+            <h2>Js break</h2>
+        </div>
+
+        <p id="GFG"></p>
+        <br> <br>
+
+        <p id="continue"></p>
+
+        <script>
+            var content = "";
+            var i;
+            for (i = 1; i < 1000; i++){
+                if (i == 6){
+                    break;
+                }
+                content += "Geeks" + i + "<br>";
+            }
+            document.getElementById('GFG').innerHTML = content;
+
+
+
+            for (i = 1; i < 100; i++){
+                if (i == 6){
+                    continue;
+                }
+                content += "Geeks" + i + "<br>";
+            }
+            document.getElementById('continue').innerHTML = content;
+        </script>
+    </body>
