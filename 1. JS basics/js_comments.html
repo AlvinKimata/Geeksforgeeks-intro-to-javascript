@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <label>
+            Enter the first number.
+            <input id="num1">
+        </label>
+        <br><br>
+
+        <label>
+            Enter the second number.
+            <input id="num2">
+        </label>
+        <br><br>
+
+        <button onclick="add()">Sum</button>
+
+        <input id="sum">
+        <script>
+            function add(){
+                //A function to add two numbers.
+                var x, y, z;
+                x = Number(document.getElementById("num1").value);
+                y = Number(document.getElementById("num2").value);
+                z = x + y;
+
+                document.getElementById("sum").value = z;
+            }
+        </script>
+
+    </body>
+</html>
