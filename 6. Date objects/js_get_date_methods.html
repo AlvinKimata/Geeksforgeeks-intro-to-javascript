@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <!--
+        getDate(): It is used to get the day as a number (1-31).
+getFullYear(): It is used to get the year.
+getHours(): It is used to get the hour (0-23).
+getMilliseconds(): It is used to get the milliseconds (0-999).
+getMinutes(): It is used to get the minutes (0-59).
+getMonth(): It is used to get the month (0-11).
+getSeconds(): It is used to get the seconds (0-59).
+getTime(): It used to return the number of milliseconds since 1 January 1970.
+getDay(): It is used to get the weekday as a number (0-6).
+date.now(): It is used to return the number of milliseconds elapsed since January 1, 1970, 00:00:00 UTC.
+    -->
+    <head>
+        <title>Js getHours() method</title>
+    </head>
+
+    <body style="text-align: center;">
+    <h1>geeksforgeeks</h1>
+    <h2>Js getHours()</h2>
+    <p id="hours"></p>
+    <br><br>
+    
+    <h2>Js getDate</h2>
+    <p id="date"></p>
+
+    <!--Script to getHours() method-->
+    <script>
+        var d  = new Date();
+        document.getElementById('hours').innerHTML = d.getHours();
+        document.getElementById('date').innerHTML = d.getDate();
+    </script>
+    </body>
+</html>
