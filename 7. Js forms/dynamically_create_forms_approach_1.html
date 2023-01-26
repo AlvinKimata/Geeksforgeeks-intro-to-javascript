@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <!--There are 2 approaches to create a form dynamically with the aid of js:
+    1. document.createElement()
+    2. document.setAttribute()
+-->
+    <head>
+        <title>Create a form dynamically with js</title>
+    </head>
+
+    <body style="text-align: center;">
+        <h1 style="color: green;">geeksforgeeks</h1>
+
+        <p>Click on the button to create a form dynamically</p>
+        <button onclick="GFG_Fun()">Click here.</button>
+
+        <p id="GFG_DOWN"></p>
+
+        <script>
+            var down = document.getElementById('GFG_DOWN');
+
+            //Create a break line element.
+            var br = document.createElement('br');
+
+            function GFG_Fun(){
+                //Create a form dynamically.
+                var form = document.createElement('form');
+                form.setAttribute('method', 'post');
+                form.setAttribute('action', 'submit.php');
+
+                //Create an input element for full name.
+                var FN = document.createElement('input');
+                FN.setAttribute('type', 'text');
+                FN.setAttribute('name', 'FullName');
+                FN.setAttribute('placeholder', 'Full Name')
+
+                //Create an attribute for date of birth.
+                var DOB = document.createElement('input');
+                DOB.setAttribute('type', 'date');
+                DOB.setAttribute('name', 'DOB');
+                DOB.setAttribute('placeholder', 'Date of Birth');
+
+                //Create an input element for email ID.
+                var email = document.createElement('input');
+                email.setAttribute('type', 'email');
+                email.setAttribute('name', 'email');
+                email.setAttribute('placeholder', 'Email ID');
+
+                //Create an element for password.
+                var password = document.createElement('input');
+                password.setAttribute('type', 'password');
+                password.setAttribute('name', 'password');
+                password.setAttribute('placeholder', 'Password');
+
+                //Create an element for reset password.
+                var reset_password = document.createElement('input');
+                reset_password.setAttribute('type', 'password');
+                reset_password.setAttribute('name', 'reset_password');
+                reset_password.setAttribute('placeholder', 'Reset Password');
+
+                //Create a submit button.
+                var s = document.createElement('input');
+                s.setAttribute('type', 'submit');
+                s.setAttribute('value', 'submit');
+
+                //Append the full name input to the form.
+                form.appendChild(FN);
+
+                //Insert a line break.
+                form.appendChild(br.cloneNode());
+
+                //Append the date of birth input to the form.
+                form.appendChild(DOB);
+                form.appendChild(br.cloneNode());
+
+                //Append the email input to the form.
+                form.appendChild(email);
+                form.appendChild(br.cloneNode());
+
+                //Append the password input to the form.
+                form.appendChild(password);
+                form.appendChild(br.cloneNode());
+
+                //Append the reset password input to the form.
+                form.appendChild(reset_password);
+                form.appendChild(br.cloneNode());
+
+                //Append the submit button to the form.
+                form.appendChild(s);
+
+                document.getElementsByTagName('body')[0].appendChild(form);
+            }
+        </script>
+    </body>
+</html>
