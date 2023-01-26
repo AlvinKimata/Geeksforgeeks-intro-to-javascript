@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Js date constructor property.</title>
+    </head>
+
+    <body style="text-align: center;">
+    <div>
+        <h1 style="color: green;">geeksforgeeks</h1>
+
+        <p>Js date constructor property returns the 
+            function that created the date's prototype.
+        </p>
+
+        <button onclick="gfg()">Click me</button>
+        <b id="GFG"></b>
+
+    </div>
+
+    <script>
+        function gfg(){
+            var dy = new Date();
+        document.getElementById("GFG").innerHTML = dy.constructor;
+        }
+    </script>
+    </body>
+</html>
