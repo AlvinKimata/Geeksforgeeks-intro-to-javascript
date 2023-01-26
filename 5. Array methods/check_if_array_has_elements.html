@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1 style="color: green">geeksforgeeks</h1>
+        <b>Check if an array is empty or exists.</b>
+
+        <p>Click on the button to check if array 
+            exists and is not empty.
+        </p>
+
+        <p>emptyArray = []</p>
+        <p>nonExistantArray = undefined</p>
+        <p>fineArray = [1, 2, 3, 4, 5]</p>
+        <br> <br>
+
+        <p>
+            Output for emptyArray:
+            <span class="output-empty"></span>
+        </p>
+        <br><br>
+
+        <p>
+            Output for nonExistantArray: <span class="output-non"></span>
+        </p>
+        <br><br>
+
+        <p>
+            Output for fineArray: <span class="output-ok"></span>
+        </p>
+        <br><br>
+
+        <button onclick="checkArray()">Check array</button>
+
+        <script type="text/javascript">
+            function checkArray(){
+                let emptyArray = [];
+                let nonExistantArray = undefined;
+                let fineArray = [1, 2, 3, 4, 5];
+
+                if (Array.isArray(emptyArray) && emptyArray.length)
+                output = true;
+                else
+                output = false;
+
+                document.querySelector(".output-empty").textContent = output;
+
+                if (Array.isArray(nonExistantArray) && nonExistantArray.length)
+                output = true;
+                else
+                output = false;
+
+                document.querySelector(".output-non").textContent = output;
+
+                if (Array.isArray(fineArray) && fineArray.length)
+                output = true;
+                else
+                output = false;
+
+                document.querySelector(".output-ok").textContent = output;
+
+        
+            }
+        </script>
+    </body>
+</html>
